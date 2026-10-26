@@ -1,0 +1,17 @@
+com\mycompany\entidades\Secretariado.class
+com\mycompany\entidades\SesionUsuario.class
+com\mycompany\entidades\Intervencion.class
+com\mycompany\entidades\Enfermeria.class
+com\mycompany\entidades\HistorialAlergia.class
+com\mycompany\entidades\SesionUsuario$TipoUsuario.class
+com\mycompany\entidades\Cita.class
+com\mycompany\entidades\Alergia.class
+com\mycompany\entidades\Cirujano.class
+com\mycompany\entidades\Paciente.class
+com\mycompany\entidades\Tratamiento.class
+com\mycompany\entidades\Medicamento.class
+com\mycompany\entidades\Empleado.class
+com\mycompany\Main.class
+com\mycompany\entidades\Historial.class
+com\mycompany\entidades\Revision.class
+com\mycompany\entidades\Especialidad.class
