@@ -4,12 +4,13 @@ package com.mycompany;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-import com.mycompany.entidades.Cirujano;
-import com.mycompany.entidades.Enfermeria;
-import com.mycompany.entidades.Especialidades;
-import com.mycompany.entidades.Secretariado;
-import com.mycompany.entidades.SesionUsuario;
-import com.mycompany.entidades.SesionUsuario.TipoUsuario;
+import com.mycompany.logica.GestorAlergias;
+import com.mycompany.modelo.Cirujano;
+import com.mycompany.modelo.Enfermeria;
+import com.mycompany.modelo.Especialidades;
+import com.mycompany.modelo.Secretariado;
+import com.mycompany.modelo.SesionUsuario;
+import com.mycompany.modelo.SesionUsuario.TipoUsuario;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -43,7 +44,7 @@ public class Main {
                         System.out.println("FIN DEL PROGRAMA");
                     }
 
-                    case 1 -> {
+                    case 1 -> { // Pasar a método
                         String usuario;
                         do {
                             System.out.println("Usuario:");
@@ -60,6 +61,9 @@ public class Main {
                             System.out.println("Rellene ambos campos");
                         }
                     }
+                    
+                    case 2 -> {registrarEmpleado();}
+                    case 3 -> {menuGestionAlergias();}
 
                     default -> {
                         System.out.println("Introduzca un número válido");
@@ -92,6 +96,8 @@ public class Main {
     public static void menuUsuario() {
         System.out.println("== MENÚ ==");
         System.out.println("1. Logout");
+        System.out.println("2. Registrar empleado"); // !!!
+        System.out.println("3. Gestión alergias"); // !!!
         System.out.println("0. Salir");
     }
 
@@ -106,6 +112,23 @@ public class Main {
         System.out.println("8. Geriatría");
         System.out.println("0. Finalizar");
         System.out.println("Introduzca las especialidades");
+    }
+    
+    public static void menuGestionAlergias(){
+        System.out.println("== GESTIÓN DE ALERGIAS ==");
+        System.out.println("1. Ver alergias");
+        System.out.println("2. Registrar alergia");
+        System.out.println("3. Editar alergia");
+        System.out.println("0. Salir");
+        System.out.println("Introduzca una opción:");
+        int input = sc.nextInt();
+        sc.nextLine();
+        switch (input){
+            case 0 -> {break;}
+            case 1 -> {GestorAlergias.verAlergias();}
+            case 2 -> {GestorAlergias.nuevaAlergia();}
+            default -> {System.out.println("Introduzca un número válido");}
+        }
     }
 
     public static int seleccionarOpcion() {
